@@ -1,0 +1,14 @@
+{
+  "rates": [
+    {
+      "max_weight_kg": 1,
+      "price": 10,
+      "service": "Carrier 1"
+    },
+    {
+      "max_weight_kg": 1,
+      "price": 15,
+      "service": "Carrier 2"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+query RunInput($freeTags: [String!]) {
+    cart{
+        buyerIdentity {
+            email
+            customer{
+                isVIP: hasAnyTag(tags: $freeTags)
+            }
+        }
+        deliveryGroups {
+            deliveryOptions {
+                title
+                handle
+            }
+        }
+    }
+}

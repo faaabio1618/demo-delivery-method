@@ -1,0 +1,24 @@
+api_version = "2023-10"
+[[extensions]]
+handle = "my-delivery-customization"
+name = "t:name"
+description = "t:description"
+type = "function"
+
+[[extensions.targeting]]
+target = "purchase.delivery-customization.run"
+input_query = "src/run.graphql"
+export = "run"
+
+[extensions.build]
+command = ""
+path = "dist/function.wasm"
+
+[extensions.ui.paths]
+create = "/"
+details = "/"
+
+[extensions.input.variables]
+namespace = "my-delivery-function"
+key = "shipping-config"
+
